@@ -1,78 +1,80 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 body {
-    background:#666;
+    margin: 0;
+    padding: 0;
+    background: #ccc;
 }
 #conteiner {
-    display: flex;
-    height: 70px;
-    background: #222;
-    border-bottom: rgba(19, 161, 218, 0.467) 5px solid;
-
+    box-sizing: content-box;
+    height: 80px;
+    background:#333;
+    border-bottom: rgb(6, 124, 124) solid 5px;
 }
-ul {
-    list-style: none;
-    display: flex;
-
-}
-.lista {
-    display: flex;
-    text-align: center;
-    width: 60px;
-    height: 65px;
-    padding: 20px 10px 10px 10px;
-    list-style: none;
+#conteiner a {
+    color: #eee;
     font-family: 'Oswald', sans-serif;
-    color: #fff
-}
-.lista:hover {
-    background: rgba(19, 161, 218, 0.467);
-    color: #222;
-}
-a {
     text-decoration: none;
+}
+.logo {
+    display: inline-block;
+    height: 80px;
+    padding: 15px;
+}
+.logo img {
+    height: 100%;
 }
 .menuMobile {
     display: none;
-    border-radius: 40px;
-    width: 0%;
+    float: right;
+    margin: 10px 15px;
+    border: #aaa solid 1px;
+    border-radius: 5px;
 }
-.logo {
-    width: 250px;
-    margin: 10px 20px 10px 10px;
+.menuMobile img {
+    height: 50px;
+}
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1em;
+}
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu li {
+    display: inline-block;
+    padding: 30px 18px;
 }
 .loggin {
-    padding: 20px 10px 10px 10px;
-    
+    float: right;
+    padding: 30px;
 }
-.login {
-    font-family: 'Oswald', sans-serif;
-    color: #fff
+.loggin .registro {
+    background: #f33;
+    padding: 15px;
+    border-radius: 25px;
+    margin-left: 10px;
 }
-.registro {
-    font-family: 'Oswald', sans-serif;
-    background: #f93333;
-    color: #fff;
-    width: 100px;
-}
-.butao {
-    width: 50px;
+.menu li:hover,
+.menu li.selected {
+    background:rgb(6, 124, 124);
+    color: #333;
 }
 
-@media(max-width: 500px) {
+@media (max-width: 605px) {
     .menuMobile {
         display: block;
     }
-    .login {
+    .menu {
         display: none;
     }
-    .registro {
-        display: none;
-    }
-    ul {
-        display: none;
+}
+@media (max-width: 785px) {
+    .loggin {
+        display:none;
     }
 }
