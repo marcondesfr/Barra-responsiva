@@ -41,6 +41,17 @@
             <a class="registro" href="#registro">Registro</a>
         </aside>
     </header>
+    <script>
+      window.onhashchange = function(e) {
+          const oldURL = e.oldURL.split('#')[1];// didivir apartir do #
+          const newURL = e.newURL.split('#')[1];
+          console.log(oldURL, newURL);
+          const oldMenu = document.querySelector(`.menu ul a[href="#${oldURL}"]`);
+          const newMenu = document.querySelector(`.menu ul a[href="#${newURL}"]`);
+          oldMenu && oldMenu.classList.remove('selected');
+          newMenu && newMenu.classList.add('selected');
+        }
+    </script>
 </body>
 
 </html>
